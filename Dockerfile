@@ -1,9 +1,13 @@
 FROM python:2.7
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /dashboard
+ENV http_proxy 'http://192.168.8.7:3128'
+ENV HTTP_PROXY 'http://192.168.8.7:3128'
+ENV https_proxy 'http://192.168.8.7:3128'
+ENV HTTPS_PROXY 'http://192.168.8.7:3128'
+RUN mkdir /CRUD
 WORKDIR /CRUD
-COPY rq.txt /CRUD/
-RUN pip install -r rq.txt
+COPY requirements.txt /CRUD/
 COPY . /CRUD
+RUN HTTP_PROXY='http://192.168.8.7:3128/' pip --no-cache-dir install -r requirements.txt && python manage.py migrate
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
