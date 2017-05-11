@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+
+</head>
+	<body style=" background-color: #444;background: url(http://s18.postimg.org/l7yq0ir3t/pick8_1.jpg);" >
+	 
+		<div class="container" style="margin-top: 100px; margin-left: 150px;">
+		
+			<div class="col-md-4">				
+			</div>
+
+			<div class="col-md-5">
+				<div class="panel-group">
+
+				    <div class="panel panel-info" >
+				    
+				      <div class="panel-heading" style="padding-top: 5px;"><h3 style="text-align: center; font-style: Courier; font-size: 30px; font-weight: bolder; color: blue">STUDENT'S RECORD</h3></div>
+
+				      		<i style="font-style: Verdana; font-size: 18px; float: left; margin-left: 50px;"> There are currently {{ object_list|length }} registered Students.</i> 
+
+						<a href="{% url 'std_list' %}"><button class="btn btn-lg btn-primary" style="margin-left: 50px; margin-top: 10px; margin-bottom: 10px; margin-right: 30px; ">View Students</button></a>
+
+						<a href="{% url 'std_create' %}"><button class="btn btn-lg btn-primary" style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px; margin-right: 50px; background-color: green;">New Record</button></a>
+
+				<!--	<a href="{% url 'login' %}"><button class="btn btn-lg btn-primary" style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px; margin-right: 50px; background-color: green;">Login</button></a>
+					-->
+						
+						
+				    </div>
+
+
+
+			  </div>
+	
+			</div>
+
+			  
+			<div class="col-md-4">				
+
+			</div>
+			
+
+		</div>
+
+	</body>
+</html>
