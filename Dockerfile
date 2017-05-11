@@ -8,6 +8,6 @@ RUN mkdir /CRUD
 WORKDIR /CRUD
 COPY requirements.txt /CRUD/
 COPY . /CRUD
-RUN HTTP_PROXY='http://192.168.8.7:3128/' pip --no-cache-dir install -r requirements.txt && python manage.py migrate
+RUN install -r requirements.txt && python manage.py migrate
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
