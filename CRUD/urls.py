@@ -3,7 +3,7 @@ from django.conf.urls import url
 from CRUD import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.index, name='CRUD'),
     url(r'^login$', views.login, name='login'),
     url(r'^list$', views.std_list, name='std_list'),
     url(r'^create$', views.std_create, name='std_create'),
