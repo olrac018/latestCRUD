@@ -10,3 +10,7 @@ class Crud(models.Model):
     fname = models.CharField(max_length = 50)
     lname = models.CharField(max_length = 50)
 
+class Log(models.Model):
+    username = models.CharField(max_length = 30)
+    password = models.CharField(max_length = 30)
+

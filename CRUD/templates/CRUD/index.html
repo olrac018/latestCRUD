@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
+{% block content %}
+
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,12 +16,50 @@
   <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
 
 </head>
+
 	<body style=" background-color: #444;background: url(http://s18.postimg.org/l7yq0ir3t/pick8_1.jpg);" >
 	 
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">{{ username.value }}</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">agag<span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="/home">home</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	            <li class="divider"></li>
+	            <li><a href="/logout">Logout</a></li>
+	          </ul>
+	        </li>
+
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
 		<div class="container" style="margin-top: 100px; margin-left: 150px;">
+
+
+
 		
 			<div class="col-md-4">				
 			</div>
+
 
 			<div class="col-md-5">
 				<div class="panel-group">
@@ -33,10 +74,10 @@
 
 						<a href="{% url 'std_create' %}"><button class="btn btn-lg btn-primary" style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px; margin-right: 50px; background-color: green;">New Record</button></a>
 
-				<!--	<a href="{% url 'login' %}"><button class="btn btn-lg btn-primary" style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px; margin-right: 50px; background-color: green;">Login</button></a>
-					-->
+					
+
 						
-						
+							
 				    </div>
 
 
@@ -54,4 +95,8 @@
 		</div>
 
 	</body>
-</html>
+
+
+
+
+{% endblock %}
